@@ -66,6 +66,7 @@ private void koclick(){
     if(gepValNum == 0){
         gepvalasztas.setImageResource(R.drawable.rock);
         dontetlenNum++;
+        dontetlenszoveg.setText(String.format("Döntetlenek száma : %d" , dontetlenNum));
     }
     if(gepValNum == 1){
         gepvalasztas.setImageResource(R.drawable.paper);
@@ -175,7 +176,7 @@ private void papirclick(){
     if(gepValNum == 1){
         gepvalasztas.setImageResource(R.drawable.paper);
         dontetlenNum++;
-
+        dontetlenszoveg.setText(String.format("Döntetlenek száma : %d" , dontetlenNum));
 
     }
     if(gepValNum == 2){
@@ -285,7 +286,7 @@ private void olloclick(){
     if(gepValNum == 2){
         gepvalasztas.setImageResource(R.drawable.scissors);
         dontetlenNum++;
-
+        dontetlenszoveg.setText(String.format("Döntetlenek száma : %d" , dontetlenNum));
     }
 
 }
