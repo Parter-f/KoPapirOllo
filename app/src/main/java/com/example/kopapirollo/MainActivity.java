@@ -297,8 +297,8 @@ private void newgame(){
     gephp3.setImageResource(R.drawable.heart2);
 
     playerhp1.setImageResource(R.drawable.heart2);
-    playerhp1.setImageResource(R.drawable.heart2);
-    playerhp1.setImageResource(R.drawable.heart2);
+    playerhp2.setImageResource(R.drawable.heart2);
+    playerhp3.setImageResource(R.drawable.heart2);
 
     dontetlenNum = 0;
     gephpNum = 3;
