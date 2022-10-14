@@ -1,9 +1,12 @@
 package com.example.kopapirollo;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -29,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private int dontetlenNum;
     private int gephpNum;
     private int playerhpNum;
+
 
 
 private void init(){
@@ -75,6 +79,24 @@ private void koclick(){
         if(playerhpNum == 0){
             playerhp3.setImageResource(R.drawable.heart1);
             //vesztettél
+            new AlertDialog.Builder(MainActivity.this)
+                    .setTitle("Vereség")
+                    .setMessage("Szeretnél új játékot kezdeni?")
+                    .setCancelable(false)
+
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            newgame();
+                        }
+                    })
+
+                    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            finish();
+                        }
+                    })
+                    .show();
         }
 
     }
@@ -90,6 +112,24 @@ private void koclick(){
         if(gephpNum == 0){
             gephp3.setImageResource(R.drawable.heart1);
             //nyertél
+            new AlertDialog.Builder(MainActivity.this)
+                    .setTitle("Győzelem")
+                    .setMessage("Szeretnél új játékot kezdeni?")
+                    .setCancelable(false)
+
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            newgame();
+                        }
+                    })
+
+                    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            finish();
+                        }
+                    })
+                    .show();
         }
     }
 
@@ -112,6 +152,24 @@ private void papirclick(){
         if(gephpNum == 0){
             gephp3.setImageResource(R.drawable.heart1);
             //nyertél
+            new AlertDialog.Builder(MainActivity.this)
+                    .setTitle("Győzelem")
+                    .setMessage("Szeretnél új játékot kezdeni?")
+                    .setCancelable(false)
+
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            newgame();
+                        }
+                    })
+
+                    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            finish();
+                        }
+                    })
+                    .show();
         }
     }
     if(gepValNum == 1){
@@ -132,6 +190,24 @@ private void papirclick(){
         if(playerhpNum == 0){
             playerhp3.setImageResource(R.drawable.heart1);
             //vesztettél
+            new AlertDialog.Builder(MainActivity.this)
+                    .setTitle("Vereség")
+                    .setMessage("Szeretnél új játékot kezdeni?")
+                    .setCancelable(false)
+
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            newgame();
+                        }
+                    })
+
+                    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            finish();
+                        }
+                    })
+                    .show();
         }
     }
 
@@ -153,6 +229,24 @@ private void olloclick(){
         if(playerhpNum == 0){
             playerhp3.setImageResource(R.drawable.heart1);
             //vesztettél
+            new AlertDialog.Builder(MainActivity.this)
+                    .setTitle("Vereség")
+                    .setMessage("Szeretnél új játékot kezdeni?")
+                    .setCancelable(false)
+
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            newgame();
+                        }
+                    })
+
+                    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            finish();
+                        }
+                    })
+                    .show();
         }
 
     }
@@ -168,6 +262,24 @@ private void olloclick(){
         if(gephpNum == 0){
             gephp3.setImageResource(R.drawable.heart1);
             //nyertél
+            new AlertDialog.Builder(MainActivity.this)
+                    .setTitle("Győzelem")
+                    .setMessage("Szeretnél új játékot kezdeni?")
+                    .setCancelable(false)
+
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            newgame();
+                        }
+                    })
+
+                    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            finish();
+                        }
+                    })
+                    .show();
         }
     }
     if(gepValNum == 2){
@@ -187,6 +299,9 @@ private void newgame(){
     playerhp1.setImageResource(R.drawable.heart2);
     playerhp1.setImageResource(R.drawable.heart2);
 
+    dontetlenNum = 0;
+    gephpNum = 3;
+    playerhpNum = 3;
 
 }
 
