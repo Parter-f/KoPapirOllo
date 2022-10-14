@@ -89,13 +89,13 @@
         android:textSize="25dp"
 
         />
+
     <ImageView
         android:id="@+id/gepvalasztas"
         android:layout_width="match_parent"
         android:layout_height="500px"
         android:layout_below="@id/dontetlenszoveg"
-        android:src="@drawable/rock"
-        />
+        android:src="@drawable/rock" />
     <TextView
         android:id="@+id/gepvalasztasszoveg"
         android:layout_width="wrap_content"
@@ -147,7 +147,7 @@
             android:id="@+id/valasztasollo"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            android:src="@drawable/paper"
+            android:src="@drawable/scissors"
             />
 
 
