@@ -137,7 +137,58 @@ private void papirclick(){
 
 }
 
+private void olloclick(){
+    playervalasztas.setImageResource(R.drawable.scissors);
+    playerValNum = 2;
+    gepValNum = rnd.nextInt(3);
+    if(gepValNum == 0){
+        gepvalasztas.setImageResource(R.drawable.rock);
+        playerhpNum--;
+        if(playerhpNum == 2){
+            playerhp1.setImageResource(R.drawable.heart1);
+        }
+        if(playerhpNum == 1){
+            playerhp2.setImageResource(R.drawable.heart1);
+        }
+        if(playerhpNum == 0){
+            playerhp3.setImageResource(R.drawable.heart1);
+            //vesztettél
+        }
 
+    }
+    if(gepValNum == 1){
+        gepvalasztas.setImageResource(R.drawable.paper);
+        gephpNum--;
+        if(gephpNum == 2){
+            gephp1.setImageResource(R.drawable.heart1);
+        }
+        if(gephpNum == 1){
+            gephp2.setImageResource(R.drawable.heart1);
+        }
+        if(gephpNum == 0){
+            gephp3.setImageResource(R.drawable.heart1);
+            //nyertél
+        }
+    }
+    if(gepValNum == 2){
+        gepvalasztas.setImageResource(R.drawable.scissors);
+        dontetlenNum++;
+
+    }
+
+}
+
+private void newgame(){
+    gephp1.setImageResource(R.drawable.heart2);
+    gephp2.setImageResource(R.drawable.heart2);
+    gephp3.setImageResource(R.drawable.heart2);
+
+    playerhp1.setImageResource(R.drawable.heart2);
+    playerhp1.setImageResource(R.drawable.heart2);
+    playerhp1.setImageResource(R.drawable.heart2);
+
+
+}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -151,10 +202,16 @@ private void papirclick(){
                 koclick();
             }
         });
-        valasztasollo.setOnClickListener(new View.OnClickListener() {
+        valasztaspapir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 papirclick();
+            }
+        });
+        valasztasollo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                olloclick();
             }
         });
 
