@@ -3,6 +3,7 @@ package com.example.kopapirollo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -55,44 +56,84 @@ private void init(){
 }
 private void koclick(){
 
-    playervalasztas.setBackgroundResource(R.drawable.rock);
+    playervalasztas.setImageResource(R.drawable.rock);
     playerValNum = 0;
     gepValNum = rnd.nextInt(3);
     if(gepValNum == 0){
-        gepvalasztas.setBackgroundResource(R.drawable.rock);
+        gepvalasztas.setImageResource(R.drawable.rock);
         dontetlenNum++;
     }
     if(gepValNum == 1){
-        gepvalasztas.setBackgroundResource(R.drawable.paper);
+        gepvalasztas.setImageResource(R.drawable.paper);
         playerhpNum--;
         if(playerhpNum == 2){
-            playerhp1.setBackgroundResource(R.drawable.heart1);
+            playerhp1.setImageResource(R.drawable.heart1);
         }
         if(playerhpNum == 1){
-            playerhp2.setBackgroundResource(R.drawable.heart1);
+            playerhp2.setImageResource(R.drawable.heart1);
         }
         if(playerhpNum == 0){
-            playerhp3.setBackgroundResource(R.drawable.heart1);
+            playerhp3.setImageResource(R.drawable.heart1);
             //vesztettél
         }
 
     }
-    if(gephpNum == 2){
-        gepvalasztas.setBackgroundResource(R.drawable.scissors);
+    if(gepValNum == 2){
+        gepvalasztas.setImageResource(R.drawable.scissors);
         gephpNum--;
         if(gephpNum == 2){
-            gephp1.setBackgroundResource(R.drawable.heart1);
+            gephp1.setImageResource(R.drawable.heart1);
         }
         if(gephpNum == 1){
-            gephp2.setBackgroundResource(R.drawable.heart1);
+            gephp2.setImageResource(R.drawable.heart1);
         }
         if(gephpNum == 0){
-            gephp3.setBackgroundResource(R.drawable.heart1);
+            gephp3.setImageResource(R.drawable.heart1);
             //nyertél
         }
     }
 
+}
 
+private void papirclick(){
+
+    playervalasztas.setImageResource(R.drawable.paper);
+    playerValNum = 1;
+    gepValNum = rnd.nextInt(3);
+    if(gepValNum == 0){
+        gepvalasztas.setImageResource(R.drawable.rock);
+        gephpNum--;
+        if(gephpNum == 2){
+            gephp1.setImageResource(R.drawable.heart1);
+        }
+        if(gephpNum == 1){
+            gephp2.setImageResource(R.drawable.heart1);
+        }
+        if(gephpNum == 0){
+            gephp3.setImageResource(R.drawable.heart1);
+            //nyertél
+        }
+    }
+    if(gepValNum == 1){
+        gepvalasztas.setImageResource(R.drawable.paper);
+        dontetlenNum++;
+
+
+    }
+    if(gepValNum == 2){
+        gepvalasztas.setImageResource(R.drawable.scissors);
+        playerhpNum--;
+        if(playerhpNum == 2){
+            playerhp1.setImageResource(R.drawable.heart1);
+        }
+        if(playerhpNum == 1){
+            playerhp2.setImageResource(R.drawable.heart1);
+        }
+        if(playerhpNum == 0){
+            playerhp3.setImageResource(R.drawable.heart1);
+            //vesztettél
+        }
+    }
 
 }
 
@@ -103,6 +144,19 @@ private void koclick(){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
+
+        valasztasko.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                koclick();
+            }
+        });
+        valasztasollo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                papirclick();
+            }
+        });
 
 
 
