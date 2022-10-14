@@ -85,13 +85,13 @@ private void koclick(){
                     .setMessage("Szeretnél új játékot kezdeni?")
                     .setCancelable(false)
 
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    .setPositiveButton("Igen", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             newgame();
                         }
                     })
 
-                    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    .setNegativeButton("Nem", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             finish();
@@ -118,13 +118,13 @@ private void koclick(){
                     .setMessage("Szeretnél új játékot kezdeni?")
                     .setCancelable(false)
 
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    .setPositiveButton("Igen", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             newgame();
                         }
                     })
 
-                    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    .setNegativeButton("Nem", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             finish();
@@ -158,13 +158,13 @@ private void papirclick(){
                     .setMessage("Szeretnél új játékot kezdeni?")
                     .setCancelable(false)
 
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    .setPositiveButton("Igen", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             newgame();
                         }
                     })
 
-                    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    .setNegativeButton("Nem", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             finish();
@@ -196,13 +196,13 @@ private void papirclick(){
                     .setMessage("Szeretnél új játékot kezdeni?")
                     .setCancelable(false)
 
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    .setPositiveButton("Igen", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             newgame();
                         }
                     })
 
-                    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    .setNegativeButton( "Nem", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             finish();
@@ -235,13 +235,13 @@ private void olloclick(){
                     .setMessage("Szeretnél új játékot kezdeni?")
                     .setCancelable(false)
 
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    .setPositiveButton("Igen", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             newgame();
                         }
                     })
 
-                    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    .setNegativeButton("Nem", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             finish();
@@ -268,13 +268,13 @@ private void olloclick(){
                     .setMessage("Szeretnél új játékot kezdeni?")
                     .setCancelable(false)
 
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    .setPositiveButton("Igen", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             newgame();
                         }
                     })
 
-                    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    .setNegativeButton("Nem", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             finish();
@@ -301,6 +301,7 @@ private void newgame(){
     playerhp3.setImageResource(R.drawable.heart2);
 
     dontetlenNum = 0;
+    dontetlenszoveg.setText(String.format("Döntetlenek száma : %d" , dontetlenNum));
     gephpNum = 3;
     playerhpNum = 3;
 
