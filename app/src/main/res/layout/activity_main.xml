@@ -4,14 +4,157 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/hpbar"
+        >
+        
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/heart2"
+            android:id="@+id/gephp1"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/heart2"
+            android:id="@+id/gephp2"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/heart2"
+            android:id="@+id/gephp3"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Gép"
+            android:textSize="10pt"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="  Játékos"
+            android:textSize="10pt"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            />
 
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/heart2"
+            android:id="@+id/playerhp1"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+
+            />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/heart2"
+            android:id="@+id/playerhp2"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+
+            />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/heart2"
+            android:id="@+id/playerhp3"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+
+            />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/dontetlenszoveg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Döntetlenek száma : 0"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/hpbar"
+        android:textSize="25dp"
 
         />
+    <ImageView
+        android:id="@+id/gepvalasztas"
+        android:layout_width="match_parent"
+        android:layout_height="500px"
+        android:layout_below="@id/dontetlenszoveg"
+        android:src="@drawable/rock"
+        />
+    <TextView
+        android:id="@+id/gepvalasztasszoveg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gepvalasztas"
+        android:textSize="25dp"
+        android:text="A gép Választása"
+        android:layout_centerInParent="true"
+
+        />
+    <ImageView
+        android:id="@+id/playervalasztas"
+        android:layout_width="match_parent"
+        android:layout_height="500px"
+        android:layout_below="@id/gepvalasztasszoveg"
+        android:src="@drawable/rock"
+
+        />
+    <TextView
+        android:id="@+id/playervalasztasszoveg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/playervalasztas"
+        android:textSize="25dp"
+        android:text="A te Választása"
+        android:layout_centerInParent="true"
+
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/playervalasztasszoveg"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:id="@+id/valasztasko"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:src="@drawable/rock"
+            />
+        <ImageView
+            android:id="@+id/valasztaspapir"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:src="@drawable/paper"
+            />
+        <ImageView
+            android:id="@+id/valasztasollo"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:src="@drawable/paper"
+            />
+
+
+
+
+    </LinearLayout>
+        
 
 
 
